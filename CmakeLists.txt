@@ -1,0 +1,39 @@
+cmake_minimum_required(VERSION 3.10)
+
+project(MySDL2Project)
+
+# Set C++ standard
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Add your source files
+file(GLOB SOURCE_FILES "src/*.cpp")
+
+# Create an executable target
+add_executable(main ${SOURCE_FILES})
+
+# Add include directories for the target
+target_include_directories(main PRIVATE "include")
+target_include_directories(main PRIVATE "C:/SDL2/include")
+
+# Link with SDL2 libraries
+find_library(MINGW32_LIBRARY mingw32 REQUIRED)
+find_library(SDL2_LIBRARY
+  NAMES SDL2
+  PATHS "C:/SDL2/lib"
+  REQUIRED
+)
+find_library(SDL_IMAGE_LIBRARY
+  NAMES SDL2_image
+  PATHS "C:/SDL2/lib"
+  REQUIRED
+)
+
+target_link_libraries(main PRIVATE ${MINGW32_LIBRARY} ${SDL2_LIBRARY} ${SDL_IMAGE_LIBRARY})
+
+# Set the output directory for the executable
+set_target_properties(main PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/debug"
+)
+
+

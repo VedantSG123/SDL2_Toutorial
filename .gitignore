@@ -1,0 +1,52 @@
+# CMake build and configuration files
+CMakeFiles/
+CMakeCache.txt
+CMakeScripts/
+CMakeSettings.json
+CMakeUserPresets.json
+CMakePredefinedTargets.json
+
+# Compiled object files and binaries
+bin/
+build/
+Debug/
+Release/
+*.so
+*.dll
+*.a
+*.o
+
+# Visual Studio Code files
+.vscode/
+
+# IDE-specific files and directories
+.idea/
+*.suo
+*.user
+*.userprefs
+*.sdf
+*.sln
+*.suo
+*.user
+*.vcxproj
+*.vcxproj.filters
+*.pdb
+
+.cache/
+*.ninja
+
+# Generated files and directories
+Debug/
+Release/
+CMakeFiles/
+CMakeScripts/
+CMakeSettings.json
+CMakeUserPresets.json
+CMakePredefinedTargets.json
+cmake_install.cmake
+compile_commands.json
+CMakeCache.txt
+
+# Ignore any custom build or output directories
+custom_build/
+output/
